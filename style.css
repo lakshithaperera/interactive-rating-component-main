@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Poppins:wght@200;400;600&display=swap');
+
+*{
+    font-family: 'Overpass', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: hsl(216, 12%, 8%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card{
+    background: #161D27;
+    border-radius: 25px;
+}
+.card-body{
+    text-align: left;
+    padding: 0 32px;
+    
+}
+.rating-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.rating-container input[type=radio] {
+    all: unset;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(149, 158, 172, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+.rating-container input[type=radio]::before {
+    content: attr(value);
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #7c8798;
+    transition: all 0.3s ease;
+  }
+
+ .rating-container input[type=radio]:hover:not(:checked) {
+    background-color: #fb7413;
+  }
+ .rating-container input[type=radio]:hover:not(:checked)::before {
+    color: white;
+  }
+  .rating-container input[type=radio]:checked {
+    background-color: hsl(216, 12%, 54%);
+  }
+  .rating-container input[type=radio]:checked::before {
+    color: white;
+  }
+
+
+
+.card-body .star{
+    margin: 30px 0;
+    width: 40px;
+    height: 40px;
+    cursor: default;
+    background-color: rgba(149, 158, 172, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+
+.card-body h2{
+    color: hsl(0, 0%, 100%);
+    font-size: 29px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.card-body > p{
+    color: hsl(217, 12%, 63%);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.3rem;
+    
+}
+button{
+    color: hsl(0, 0%, 100%);
+    background: hsl(25, 97%, 53%);
+    width: 100%;
+    border: none;
+    padding: 10px 0;
+    border-radius: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 0.04rem;
+    margin-bottom: 30px;
+    transition: 0.4s all ease;
+    cursor: pointer;
+    
+}
+
+button:hover{
+    color: hsl(25, 97%, 53%);
+    background: hsl(0, 0%, 100%);
+}
+
+
+
+.card-thankyou-body{
+    display: none;
+    text-align: center;
+    padding: 0 32px;
+    position: relative;
+}
+
+.card-thankyou-body  .img svg{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.text-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.display-rating{
+    color: #fb7413;
+    font-size: 13px;
+    border-radius: 20px;
+    background: #374151;
+    padding-top: 6px;
+    padding-bottom: 3px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: max-content;
+    
+}
+
+.card-thankyou-body .text-box h2{
+    color:  hsl(0, 0%, 100%);
+    font-size: 29px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.card-thankyou-body .text-box .last{
+    color: hsl(217, 12%, 63%);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.3rem;
+    margin-bottom: 40px;
+}
+
+@media(max-width:600px) {
+    .card{
+        margin: 0 40px;
+    }
+    .rating-container input[type=radio]{
+          width: 40px;
+          height: 40px;
+    }
+    .card-body{
+        padding: 0 20px;
+    }
+    .card-body h2{
+        font-size: 22px;
+    }
+    .card-body > p{
+        font-size: 12px;
+    }
+    .card-thankyou-body{
+        padding:0 20px;
+    }
+    .display-rating{
+        font-size: 12px;
+    }
+    .card-thankyou-body .text-box h2{
+        font-size: 22px;
+    }
+    .card-thankyou-body .text-box .last{
+        font-size: 12px;
+    }
+}
